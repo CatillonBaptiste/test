@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "informations",
+  "info": {
+    "name": "informations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "author": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "hospital": {
+      "model": "hospital",
+      "via": "informations"
+    },
+    "service": {
+      "model": "service",
+      "via": "informations"
+    },
+    "likes": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "likedInformations",
+      "dominant": true
+    },
+    "dislikes": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "dislikedInformations",
+      "dominant": true
+    }
+  }
+}

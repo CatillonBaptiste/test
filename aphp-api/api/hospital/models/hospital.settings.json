@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "hospitals",
+  "info": {
+    "name": "Hospital"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "nameSirius": {
+      "type": "string"
+    },
+    "nameBasins": {
+      "type": "string"
+    },
+    "code": {
+      "type": "integer"
+    },
+    "services": {
+      "collection": "service",
+      "via": "hospital"
+    },
+    "informations": {
+      "via": "hospital",
+      "collection": "informations"
+    },
+    "dept": {
+      "type": "integer"
+    },
+    "records": {
+      "via": "hospital",
+      "collection": "record"
+    }
+  }
+}

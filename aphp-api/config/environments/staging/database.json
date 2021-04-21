@@ -1,0 +1,15 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "mongoose",
+      "settings": {
+        "uri": "mongodb://dev:pastis51@aphp-api-shard-00-00-bzyls.mongodb.net:27017,aphp-api-shard-00-01-bzyls.mongodb.net:27017,aphp-api-shard-00-02-bzyls.mongodb.net:27017/test?ssl=true&replicaSet=aphp-api-shard-0&authSource=admin&retryWrites=true&w=majority",
+        "database": "aphp-api"
+      },
+      "options": {
+        "ssl": true
+      }
+    }
+  }
+}

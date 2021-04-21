@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "services",
+  "info": {
+    "name": "service"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nameSirius": {
+      "type": "string"
+    },
+    "nameBasins": {
+      "type": "string"
+    },
+    "code": {
+      "type": "integer"
+    },
+    "hospital": {
+      "via": "services",
+      "model": "hospital"
+    },
+    "users": {
+      "via": "currentService",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "informations": {
+      "via": "service",
+      "collection": "informations"
+    },
+    "records": {
+      "via": "service",
+      "collection": "record"
+    }
+  }
+}

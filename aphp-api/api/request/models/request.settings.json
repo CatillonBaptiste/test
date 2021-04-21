@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "requests",
+  "info": {
+    "name": "request"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "fromUser": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "toUser": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "toShift": {
+      "model": "shift"
+    },
+    "isReviewed": {
+      "type": "boolean",
+      "default": false
+    },
+    "isAccepted": {
+      "type": "boolean"
+    },
+    "fromShift": {
+      "model": "shift"
+    }
+  }
+}
